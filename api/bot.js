@@ -1,4 +1,4 @@
-export default async function handler(req, res) {
+module.exports = async function handler(req, res) {
   if (req.method !== 'POST') return res.status(200).send('Bot is active');
 
   const TOKEN = process.env.BOT_TOKEN;
@@ -51,4 +51,4 @@ export default async function handler(req, res) {
   }
 
   return res.status(200).end();
-}
+};
